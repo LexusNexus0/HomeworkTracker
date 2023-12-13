@@ -1,0 +1,29 @@
+<html>
+    <head>
+        <title>Tasks Due</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1><%= selectedSubject %> Tasks</h1>
+            <p><a class="card-button" href="/">Back</a></p>
+            <p><a class="card-button" href="/add">+ Add new tasks</a>
+            <div class="row">
+                <% tasksList.forEach(function(task) { %>
+                    <div class="card">
+                        <div>
+                            <p class="card-title"><%= task.taskName %></p>
+                            <p class="card-subtitle"><%= task.subject %></p>
+                            <p class="card=text">Due: <%= task.dueDay %> of <%= task.dueMonth %>, <%= task.dueYear %></p>
+
+                            <p><a class="card-button" href="/task/<%= task.id %>">View Task</a></p>
+                        </div>
+                    </div>
+                <% }); %>
+            </div>
+            <p><br></p>
+        </div>
+    </body>
+</html>

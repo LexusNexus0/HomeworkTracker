@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <title>Tasks Due</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Add a new task</h1>
+            <p><a class="card-button" href="/">Back</a></p>
+
+            <fieldset>
+                <form action="/add" method="post">
+                    <input type="text" name="taskName" placeholder="Enter the name of the task" class="tasks-input" required>
+                    <select name="subject" class="tasks-input" required>
+                            <option value="" disabled selected hidden>Choose a subject</option>
+                        <% subjectsList.forEach(function(subject) { %>
+                            <option value="<%= subject.subject %>"><%= subject.subject %></option>
+                        <% }) %>
+                    </select>
+                    <input type="date" name="dueDate" placeholder="Please choose the date the task is due" class="tasks-input" required>
+                    <input type="text" name="description" placeholder="Enter a short description of the task" class="tasks-input" required>
+                    <input type="submit" class="tasks-button" value="Add task">
+                </form>
+                <p><br></p>
+            </fieldset>
+        </div>
+    </body>
+</html>

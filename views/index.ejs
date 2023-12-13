@@ -1,0 +1,65 @@
+<html>
+    <head>
+        <title>Tasks Due</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>My Tasks</h1>
+            <p><a class="card-button" href="/add">+ Add new tasks</a> <a class="card-button" href="/subjects">Search by subject</a></p>
+
+            <div class="incompleteAndCompleted">
+                <div class="incomplete">
+                    <h2>Incomplete Tasks:</h2>
+                    <div class="row">
+                        <% IncompleteTaskList.forEach(function(task) { %>
+                            <% if (task.dueDate < currentDate) { %>
+                                <h2>Overdue:</h2>
+                                <div class="card">
+                                    <div>
+                                        <p class="card-title"><%= task.taskName %></p>
+                                        <p class="card-subtitle"><%= task.subject %></p>
+                                        <p class="card=text">Due: <%= task.dueDate %></p>
+
+                                        <p><a class="card-button" href="/task/<%= task.id %>">View Task</a></p>
+                                    </div>
+                                </div>
+                            <% } else { %>
+                                <h2>Needs to be completed:</h2>
+                                <div class="card">
+                                    <div>
+                                        <p class="card-title"><%= task.taskName %></p>
+                                        <p class="card-subtitle"><%= task.subject %></p>
+                                        <p class="card=text">Due: <%= task.dueDate %></p>
+
+                                        <p><a class="card-button" href="/task/<%= task.id %>">View Task</a></p>
+                                    </div>
+                                </div>
+                            <% } %>
+                        <% }); %>
+                    </div>
+                </div>
+                
+                <div class="completed">
+                    <h2>Completed Tasks:</h2>
+                    <div class="row">
+                        <% CompletedTaskList.forEach(function(task) { %>
+                            <div class="card">
+                                <div>
+                                    <p class="card-title"><%= task.taskName %></p>
+                                    <p class="card-subtitle"><%= task.subject %></p>
+                                    <p class="card=text">Due: <%= task.dueDate %></p>
+
+                                    <p><a class="card-button" href="/task/<%= task.id %>">View Task</a></p>
+                                </div>
+                            </div>
+                        <% }); %>
+                    </div>
+                </div>
+            </div>
+            <p><br></p>
+        </div>
+    </body>
+</html>

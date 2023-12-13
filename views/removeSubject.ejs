@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <title>Tasks Due</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Remove a subject</h1>
+            <p><a class="card-button" href="/">Back</a></p>
+
+            <fieldset>
+                <form action="/removeSubject" method="post">
+                    <select name="subject" class="tasks-input" required>
+                        <option value="" disabled selected hidden>Choose a subject</option>
+                        <% subjectsList.forEach(function(subject) { %>
+                            <option value="<%= subject.subject %>"><%= subject.subject %></option>
+                        <% }) %>
+                    </select>
+                    <input type="submit" class="tasks-button" value="Remove subject">
+                </form>
+                <p><br></p>
+            </fieldset>
+        </div>
+    </body>
+</html>

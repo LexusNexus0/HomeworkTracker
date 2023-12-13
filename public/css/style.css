@@ -1,0 +1,133 @@
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.container {
+    min-width: 70%;
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+fieldset {
+    display: block;
+    -webkit-margin-start: 0px;
+    -webkit-margin-end: 0px;
+    -webkit-padding-before: 0em;
+    -webkit-padding-start: 0em;
+    -webkit-padding-end: 0em;
+    -webkit-padding-after: 0em;
+    border: 0px;
+    border-image-source: initial;
+    border-image-slice: initial;
+    border-image-width: initial;
+    border-image-outset: initial;
+    border-image-repeat: initial;
+    min-width: -webkit-min-content;
+    padding: 30px;
+}
+
+.tasks-input {
+    font-size: 1em;
+    border-bottom: 1px solid #ddd;
+}
+
+.tasks-button {
+    font-size: 1em;
+    background-color: transparent;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    padding: 10px 30px;
+    width: 100%;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.tasks-input {
+    font-size: 1em;
+    display: block;
+    width: 100%;
+    border: 0px;
+    border-bottom: 1px solid grey;
+    outline: none;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #4b545f;
+    background: #fff;
+    font-family: Open Sans, Verdana;
+    padding: 10px 15px;
+    margin: 30px 0px;
+    -webkit-transition: all 0.1s ease-in-out;
+    -moz-transition: all 0.1s ease-in-out;
+    -ms-transition: all 0.1s ease-in-out;
+    -o-transition: all 0.1s ease-in-out;
+    transition: all 0.1s ease-in-out;
+}
+
+.tasks-button:hover {
+    border: 2px solid #c6c6c6;
+    background-color: #f7f7f7
+}
+
+.card-title {
+    font-size: 1.5em;
+    color: #00926e;
+}
+
+.card-subtitle {
+    font-size: 1.25em;
+    color: #2C7260;
+}
+
+.card-text {
+    font-size: 1em;
+    color: #575251;
+}
+
+.card-button {
+    color: #00926e;
+    border: 2px solid #c6c6c6;
+    background-color: #f7f7f7;
+    padding: 3px;
+    text-decoration: none;
+}
+
+.error {
+    color: #db3818;
+}
+
+.card {
+    float: left;
+    clear: none;
+    width: 18rem;
+}
+
+strong {
+    color: black;
+    font-weight: bolder;
+}
+
+.incompleteAndCompleted {
+    margin: 0;
+    position: absolute;
+    width: 70%;
+}
+
+.overdue {
+    float: left;
+}
+
+.incomplete {
+    float: left;
+    clear: left;
+}
+
+.completed {
+    float: left;
+    clear: left;
+}

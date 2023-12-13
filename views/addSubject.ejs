@@ -1,0 +1,22 @@
+<html>
+    <head>
+        <title>Tasks Due</title>
+        <link rel="stylesheet" type="text/css" href="/css/style.css">
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:300" rel="stylesheet" type="text/css">
+    </head>
+
+    <body>
+        <div class="container">
+            <h1>Add a new subject</h1>
+            <p><a class="card-button" href="/">Back</a></p>
+
+            <fieldset>
+                <form action="/addSubject" method="post">
+                    <input type="text" name="subject" placeholder="Please enter the name of the subject" class="tasks-input" required>
+                    <input type="submit" class="tasks-button" value="Add subject"> 
+                </form>
+                <p><br></p>
+            </fieldset>
+        </div>
+    </body>
+</html>
